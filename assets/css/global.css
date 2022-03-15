@@ -1,0 +1,23 @@
+/*===================== GLOBAL ========= */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: #FCFCFC;
+  --text-color: #464646;
+  --blue-100: #EAF2FD;
+  --blue-200: #D4E4FA;
+  --blue-300: #5595E9;
+  --blue-400: #2A7AE4;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
