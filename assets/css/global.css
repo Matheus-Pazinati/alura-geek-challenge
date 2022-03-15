@@ -7,8 +7,8 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
-
 :root {
   --white-color: #FCFCFC;
   --text-color: #464646;
@@ -17,7 +17,46 @@
   --blue-300: #5595E9;
   --blue-400: #2A7AE4;
 }
-
 body {
-  font-family: 'Raleway', sans-serif;
+  background-color: var(--white-color);
+}
+.container {
+  padding: 1rem;
+}
+
+/*===================== HEADER ========= */
+.header__upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.header__logo {
+  display: flex;
+  flex-grow: 1;
+  width: 100px;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__login {
+  padding: 0.75rem 3rem;
+  background: transparent;
+  border: 1px solid var(--blue-400);
+  color: var(--blue-400);
+  cursor: pointer;
+  transition: background 0.3s;
+  flex-grow: 3;
+  font-weight: 700;
+}
+.header__login:hover,
+.header__login:active {
+  background-color: var(--blue-200);
+}
+.header__search {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  flex-grow: 1;
 }
