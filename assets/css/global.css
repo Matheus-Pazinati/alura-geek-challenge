@@ -1,6 +1,6 @@
-/*===================== GLOBAL ========= */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
+/*===================== RESET ========= */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +10,17 @@
   font-family: 'Raleway', sans-serif;
   color: var(--text-color);
 }
+fieldset {
+  border: none;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+/*===================== GLOBAL ========= */
 :root {
   --white-color: #FCFCFC;
   --text-color: #464646;
@@ -23,6 +34,19 @@ body {
 }
 .container {
   padding: 1rem;
+}
+.main__button {
+  background-color: var(--blue-400);
+  color: var(--white-color);
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.main__button:hover,
+.main__button:active {
+  background-color: var(--blue-300);
 }
 
 /*===================== HEADER ========= */
