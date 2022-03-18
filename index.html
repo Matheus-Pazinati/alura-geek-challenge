@@ -165,7 +165,9 @@
       <form action="" method="post">
         <fieldset class="contact__form">
           <legend class="form__title">Fale conosco</legend>
-          <input type="text" placeholder="Nome" class="form__input">
+          <label for="name" class="sr-only">Digite seu nome</label>
+          <input type="text" placeholder="Nome" class="form__input" id="name">
+          <label for="message" class="sr-only">Digite sua mensagem</label>
           <textarea name="message" id="message" cols="30" rows="4" class="form__message" placeholder="Escreva sua mensagem"></textarea>
           <button class="form__button main__button">Enviar mensagem</button>
         </fieldset>
