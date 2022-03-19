@@ -73,6 +73,7 @@
   color: var(--blue-400);
   font-weight: 700;
 }
+
 /*===================== RESPONSIVE ========= */
 @media (min-width: 650px) {
   .banner__image {
@@ -84,5 +85,14 @@
   .banner__description {
     font-size: 22px;
     margin: 1rem 0;
+  }
+  /*=================================== */
+  .products__link,
+  .products__link i,
+  .card__link {
+    font-size: 1rem;
+  }
+  .products__cards {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
