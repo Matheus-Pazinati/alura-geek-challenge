@@ -193,4 +193,15 @@ body {
     opacity: 0;
     visibility: hidden;
   }
+  /*=================================== */
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+  }
+  .contact__list {
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
 }
