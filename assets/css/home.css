@@ -130,7 +130,7 @@
   }
   .products__card:nth-child(5),
   .products__card:nth-child(6) {
-    display: initial;
+    display: flex;
     opacity: 1;
     visibility: visible;
   }
