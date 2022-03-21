@@ -123,7 +123,7 @@ body {
 }
 .form__input {
   padding: 0.75rem;
-  margin: 0.5rem 0 1rem #A2A2A2;
+  margin: 0.5rem 0 1rem 0;
   border-radius: 4px;
   border-bottom: 1px solid #A2A2A2;
   width: 100%;
@@ -234,5 +234,16 @@ body {
   .header__login {
     padding: 1rem 4.375rem;
     font-size: 1rem;
+  }
+  /*=================================== */
+  .contact {
+    padding: 4rem 9.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .contact__list {
+    margin-top: 0;
   }
 }
