@@ -11,8 +11,18 @@
   position: absolute;
   bottom: 0;
 }
+@keyframes changeTextShadow {
+  from {
+    text-shadow: 0 0 10px var(--text-color);
+  }
+  to {
+    text-shadow: 0 0 10px var(--blue-400);
+  }
+}
 .banner__title {
   color: var(--white-color);
+  transition: text-shadow 0.2s;
+  animation: changeTextShadow 1.8s ease-in-out infinite alternate;
 }
 .banner__description {
   margin: 0.5rem 0;
