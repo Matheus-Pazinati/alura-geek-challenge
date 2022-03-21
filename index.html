@@ -29,7 +29,7 @@
       <div class="banner__content container">
         <h2 class="banner__title">Dezembro Promocional</h2>
         <p class="banner__description">Produtos selecionados com 33% de desconto</p>
-        <button class="banner__button main__button">Ver Consoles</button>
+        <button class="banner__button main-button">Ver Consoles</button>
       </div>
     </section>
   </header>
@@ -208,11 +208,13 @@
       <form action="" method="post">
         <fieldset class="contact__form">
           <legend class="form__title">Fale conosco</legend>
-          <label for="name" class="sr-only">Digite seu nome</label>
-          <input type="text" placeholder="Nome" class="form__input" id="name">
+          <div class="input__container">
+            <input type="text" class="form__input main-input" id="name" required>
+            <label for="name" class="suspended-label">Nome</label>
+          </div>
           <label for="message" class="sr-only">Digite sua mensagem</label>
-          <textarea name="message" id="message" cols="30" rows="4" class="form__message" placeholder="Escreva sua mensagem"></textarea>
-          <button class="form__button main__button">Enviar mensagem</button>
+          <textarea name="message" id="message" cols="30" rows="4" class="form__message main-input" placeholder="Escreva sua mensagem" required></textarea>
+          <button class="form__button main-button">Enviar mensagem</button>
         </fieldset>
       </form>
     </section>
