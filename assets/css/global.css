@@ -23,14 +23,15 @@ textarea {
 /*===================== GLOBAL ========= */
 :root {
   --white-color: #FCFCFC;
+  --gray-color: #F5F5F5;
   --text-color: #464646;
   --blue-100: #EAF2FD;
   --blue-200: #D4E4FA;
   --blue-300: #5595E9;
   --blue-400: #2A7AE4;
 }
-body {
-  background-color: var(--white-color);
+main {
+  background-color: var(--gray-color);
 }
 .container {
   padding: 1rem;
@@ -193,7 +194,7 @@ body {
     flex-grow: 0.6;
   }
   .search__input {
-    background-color: #F5F5F5;
+    background-color: var(--gray-color);
     padding: 0.75rem 5rem 0.75rem 1rem;
     border-radius: 20px;
     width: 100%;
