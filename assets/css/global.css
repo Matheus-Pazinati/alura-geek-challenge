@@ -103,6 +103,7 @@ main {
   transition: background 0.3s;
   flex-grow: 3;
   font-weight: 600;
+  text-align: center;
 }
 .header__login:hover,
 .header__login:active {
