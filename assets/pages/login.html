@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alura Geek | Login</title>
+  <link rel="stylesheet" href="../fonts/style.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <header>
+    <section class="header__upper container">
+      <div class="logo__container">
+        <h1 class="header__logo">
+          <img src="../images/logo.svg" alt="Logotipo da AluraGeek">
+        </h1>
+        <div class="search__container">
+          <label for="search" class="sr-only"></label>
+          <input type="text" name="search" id="search" placeholder="O que deseja encontrar?" class="search__input">
+          <i class="icon-search search__icon"></i>
+        </div>
+      </div>
+      <button class="header__login" data-button-login>Login</button>
+      <i class="icon-search header__search" data-button-search></i>
+    </section>
+  </header>
+  <main>
+    <form action="" class="login">
+      <fieldset class="login__container">
+        <legend class="login__title">Iniciar Sessão</legend>
+        <label for="email" class="sr-only">Escreva seu email</label>
+        <input type="email" id="email" class="login__email main-input" placeholder="Escreva seu email" required>
+        <label for="email" class="sr-only">Escreva sua senha</label>
+        <input type="password" id="password" class="login__password main-input" placeholder="Escreva sua senha" required>
+        <button class="login__button main-button">Entrar</button>
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <section class="contact container">
+        <img src="../images/logo.svg" alt="Logotipo da AluraGeek" class="contact__logo">
+        <ul class="contact__list">
+          <li class="contact__link">
+            <a href="#">Quem somos nós</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Política de privacidade</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Programa fidelidade</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Nossas lojas</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Quero ser franqueado</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Anuncie aqui</a>
+          </li>
+        </ul>
+      <form action="" method="post">
+        <fieldset class="contact__form">
+          <legend class="form__title">Fale conosco</legend>
+          <div class="input__container">
+            <input type="text" class="form__input main-input" id="name" required>
+            <label for="name" class="suspended-label">Nome</label>
+          </div>
+          <label for="message" class="sr-only">Digite sua mensagem</label>
+          <textarea name="message" id="message" cols="30" rows="4" class="form__message main-input" placeholder="Escreva sua mensagem" required></textarea>
+          <button class="form__button main-button">Enviar mensagem</button>
+        </fieldset>
+      </form>
+    </section>
+    <section class="credits">
+      <h4 class="credits__title">Desenvolvido por Matheus Pazinati
+        <br>
+        2022      
+      </h4>
+    </section>
+  </footer>
+</body>
+</html>
