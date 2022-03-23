@@ -83,6 +83,19 @@
   }
 }
 @media (min-width: 1200px) {
+  .product {
+    padding: 4rem 9.5rem 2rem 9.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .product__price {
+    font-size: 22px;
+  }
+  .product__title {
+    font-size: 52px;
+  }
+  .product__description {
+    font-size: 1rem;
+  }
   .products__title {
     font-size: 2rem;
   }
