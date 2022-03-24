@@ -4,7 +4,7 @@
 @import '../css/components/footer.css';
 
 /*===================== BANNER ========= */
-.header__banner {
+.banner {
   position: relative;
 }
 .banner__image {
@@ -83,5 +83,8 @@
   .banner__button {
     padding: 1rem;
     font-size: 1rem;
+  }
+  .container:nth-child(2) {
+    padding-top: 4rem;
   }
 }

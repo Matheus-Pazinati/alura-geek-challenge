@@ -48,9 +48,6 @@
   .products__title {
     font-size: 2rem;
   }
-  .products:first-child {
-    padding-top: 4rem;
-  }
   .products:last-child {
     padding-bottom: 4rem;
   }
