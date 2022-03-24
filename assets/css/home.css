@@ -1,3 +1,8 @@
+@import '../css/components/reset-global.css';
+@import '../css/components/header.css';
+@import '../css/components/products.css';
+@import '../css/components/footer.css';
+
 /*===================== BANNER ========= */
 .header__banner {
   position: relative;
@@ -41,9 +46,6 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
-}
-.products__title {
-  font-weight: 700;
 }
 .products__link {
   display: flex;

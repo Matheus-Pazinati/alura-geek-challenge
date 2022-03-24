@@ -1,3 +1,7 @@
+@import '../css/components/reset-global.css';
+@import '../css/components/header.css';
+@import '../css/components/footer.css';
+
 /*===================== FORM ========= */
 .login {
   width: 275px;
