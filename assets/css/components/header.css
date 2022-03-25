@@ -6,9 +6,10 @@
   gap: 2rem;
 }
 .header__logo {
-  display: flex;
-  flex-grow: 1;
   width: 100px;
+}
+.header__logo a {
+  display: flex;
 }
 .header__logo img {
   width: 100%;
