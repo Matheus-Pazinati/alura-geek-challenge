@@ -57,3 +57,19 @@
 .card__price {
     font-weight: 700;
 }
+
+/*===================== RESPONSIVE ========= */
+@media (min-width: 650px) {
+  .products__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .products__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .header__link {
+    margin: 0;
+  }
+}
