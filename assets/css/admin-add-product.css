@@ -106,3 +106,18 @@
     content: 'Procure no seu tablet'
   }
 }
+@media (min-width: 1200px) {
+  .add-product__title {
+    font-size: 2rem;
+  }
+  .add-product fieldset {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .add-image__drop {
+    flex-grow: 1;
+  }
+  .add-image__button::after {
+    content: 'Procure no seu computador';
+  }
+}
