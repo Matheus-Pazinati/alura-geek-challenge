@@ -29,7 +29,7 @@
 }
 .form__input:focus + .suspended-label,
 .form__input:valid + .suspended-label {
-  font-size: 12px;
+  font-size: 0.75rem;
   top: 0.75rem;
   transition: 0.2s;
 }
@@ -55,7 +55,7 @@
   .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 3.125rem 1fr;
     justify-items: start;
   }
   .contact__logo {

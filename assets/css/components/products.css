@@ -23,16 +23,14 @@
   gap: 0.5rem;
 }
 .card__title {
-  font-size: 14px;
-  font-weight: 600;
+  font: var(--font-14600);
 }
 .card__price {
   font-weight: 700;
 }
 .card__link {
-  font-size: 14px;
   color: var(--blue-400);
-  font-weight: 700;
+  font: var(--font-14700);
 }
 
 /*===================== RESPONSIVE ========= */

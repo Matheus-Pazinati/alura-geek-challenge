@@ -7,8 +7,7 @@
   padding: 2rem;
 }
 .header__title {
-  font-size: 22px;
-  font-weight: 700;
+  font: var(--font-22700);
 }
 .header__link {
   display: inline-block;
@@ -40,15 +39,13 @@
 }
 .card__icon {
     font-size: 1.5rem;
-    color: #FCFCFC;
+    color: var(--white-color);
     cursor: pointer;
-    transition: color 0.3s;
+    opacity: 0.75;
+    transition: opacity 0.2s;
 }
-.icon-delete:hover {
-    color: #CC1111;
-}
-.icon-create:hover {
-    color: orangered;
+.card__icon:hover {
+    opacity: 1;
 }
 .card__title,
 .card__description {

@@ -30,10 +30,9 @@
   animation: changeTextShadow 1.8s ease-in-out infinite alternate;
 }
 .banner__description {
+  font: var(--font-14600);
   margin: 0.5rem 0;
-  font-size: 14px;
   color: var(--white-color);
-  font-weight: 600;
   text-shadow: 0 0 10px var(--text-color);
 }
 .banner__button {
@@ -52,13 +51,11 @@
   align-items: center;
   gap: 4px;
   color: var(--blue-400);
-  font-weight: 700;
-  font-size: 14px;
+  font: var(--font-14700);
 }
 .products__link i {
   color: var(--blue-400);
-  font-weight: 700;
-  font-size: 14px;
+  font: var(--font-14700);
 }
 
 /*===================== RESPONSIVE ========= */
@@ -70,7 +67,7 @@
     font-size: 52px;
   }
   .banner__description {
-    font-size: 22px;
+    font-size: 1.375rem;
     margin: 1rem 0;
   }
   /*=================================== */
