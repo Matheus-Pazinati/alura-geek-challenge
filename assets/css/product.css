@@ -7,7 +7,6 @@
 .product__image {
   width: 100vw;
   height: 192px;
-  max-width: 375px;
   margin: 0 auto;
 }
 .product__image img {
