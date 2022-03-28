@@ -2,3 +2,55 @@
 @import '../css/components/header.css';
 @import '../css/components/footer.css';
 
+/*===================== ADD PRODUCT ========= */
+.add-product fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.add-product__title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+.add-image__drop,
+.add-product__add-image span,
+.add-image__add-file input[type="file"] {
+  display: none;
+}
+.add-image__add-file {
+  height: 15vh;
+  border: 2px dashed #C8C8C8;
+  background-color: #FCFCFC;
+}
+.add-image__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  height: 100%;
+  color: #6B6B6B;
+}
+.add-image__icon {
+  font-size: 2rem;
+  color: #C8C8C8;
+}
+.add-product__name,
+.add-product__price {
+  position: relative;
+}
+.add-product__name input,
+.add-product__price input {
+  margin-bottom: 0;
+}
+.add-product__description {
+  padding: 1rem 0 0 0.75rem;
+}
+.add-product__button {
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}

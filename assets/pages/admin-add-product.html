@@ -27,9 +27,34 @@
     </section>
   </header>
   <main>
-    <form action="" class="add-product">
-      <fieldset class="container">
-        <legend>Adicionar novo produto</legend>
+    <form action="" class="add-product container">
+      <fieldset>
+        <legend class="add-product__title">Adicionar novo produto</legend>
+        <div class="add-product__add-image">
+          <div class="add-image__drop">
+            <i class="icon-insert_photo add-image__icon"></i>
+            <p class="image-drop__text">Arraste para adicionar uma imagem para o produto</p>
+          </div>
+          <span>Ou</span>
+          <div class="add-image__add-file">
+            <label for="add-image" class="add-image__button">
+              <i class="icon-add add-image__icon"></i>
+              Adicionar uma imagem para o produto
+            </label>
+            <input type="file" id="add-image" name="add-image" accept=".jpg, .jpeg, .png">
+          </div>
+        </div>
+        <div class="add-product__name">
+          <input type="text" class="main-input form__input" id="name" required>
+          <label for="name" class="suspended-label">Nome do produto</label>
+        </div>
+        <div class="add-product__price">
+          <input type="number" class="main-input form__input" id="price" required>
+          <label for="price" class="suspended-label">Preço do produto</label>
+        </div>
+        <label for="description" class="sr-only">Descrição do produto</label>
+        <textarea name="description" id="description" cols="30" rows="4" class="add-product__description main-input" placeholder="Descrição do produto"></textarea>
+        <button type="submit" class="add-product__button main-button">Adicionar produto</button>
       </fieldset>
     </form>
   </main>
