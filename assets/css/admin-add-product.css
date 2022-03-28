@@ -54,3 +54,55 @@
   font-size: 1rem;
   font-weight: 500;
 }
+/*===================== RESPONSIVE ========= */
+@media (min-width: 650px) {
+  .add-image__drop,
+  .add-product__add-image span {
+    display: inline-block;
+  }
+  .add-product__add-image {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .add-image__drop {
+    width: 254px;
+    height: 152px;
+    background-color: #FCFCFC;
+    border: 2px dashed #C8C8C8;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .image-drop__text {
+    font-size: 14px;
+    color: #6B6B6B;
+    text-align: center;
+    line-height: 20px;
+  }
+  .add-image__add-file {
+    height: initial;
+    border: none;
+    background-color: transparent;
+    transition: background 0.3s;
+  }
+  .add-image__add-file:hover {
+    background-color: var(--blue-200);
+  }
+  .add-image__button,
+  .icon-add {
+    font-size: 0;
+  }
+  .add-image__button {
+    display: inline-block;
+    border: 1px solid var(--blue-400);
+    padding: 1rem;
+    color: var(--blue-400);
+  }
+  .add-image__button::after {
+    font-size: 1rem;
+    content: 'Procure no seu tablet'
+  }
+}
