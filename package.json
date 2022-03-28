@@ -1,0 +1,9 @@
+{
+  "name": "AluraGeek",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Matheus-Pazinati/alura-geek-challenge.git",
+  "author": "Matheus Pazinati <matheuspazinati@gmail.com>",
+  "license": "MIT",
+  "type": "module" 
+}
