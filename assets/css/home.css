@@ -4,6 +4,9 @@
 @import '../css/components/footer.css';
 
 /*===================== BANNER ========= */
+html {
+  scroll-behavior: smooth;
+}
 .banner {
   position: relative;
 }
@@ -15,6 +18,10 @@
 .banner__content {
   position: absolute;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 @keyframes changeTextShadow {
   from {
@@ -31,7 +38,6 @@
 }
 .banner__description {
   font: var(--font-14600);
-  margin: 0.5rem 0;
   color: var(--white-color);
   text-shadow: 0 0 10px var(--text-color);
 }
@@ -60,6 +66,9 @@
 
 /*===================== RESPONSIVE ========= */
 @media (min-width: 650px) {
+  .banner__content {
+    gap: 1rem;
+  }
   .banner__image {
     height: 45vh;
   }
@@ -68,7 +77,6 @@
   }
   .banner__description {
     font-size: 1.375rem;
-    margin: 1rem 0;
   }
   /*=================================== */
   .products__link,
