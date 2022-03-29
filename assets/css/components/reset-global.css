@@ -14,7 +14,8 @@ fieldset {
   border: none;
 }
 input,
-textarea {
+textarea,
+select {
   outline: none;
   border: none;
   resize: none;

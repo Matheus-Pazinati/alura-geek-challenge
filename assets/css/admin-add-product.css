@@ -44,6 +44,15 @@ header .header__login {
 .add-product__price {
   position: relative;
 }
+.add-product__category {
+  padding: 1rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.add-product__category:not(:valid) {
+  color: var(--gray-200);
+}
 .add-product__name input,
 .add-product__price input {
   margin-bottom: 0;

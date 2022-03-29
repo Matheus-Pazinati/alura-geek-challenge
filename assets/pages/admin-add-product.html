@@ -50,6 +50,12 @@
           <input type="text" class="main-input form__input" id="name" required>
           <label for="name" class="suspended-label">Nome do produto</label>
         </div>
+        <select name="category" id="category" class="add-product__category" required>
+          <option value="" hidden>Selecione a categoria do produto</option>
+          <option value="starwars">Star Wars</option>
+          <option value="consoles">Consoles</option>
+          <option value="diversos">Diversos</option>
+        </select>
         <div class="add-product__price">
           <input type="number" class="main-input form__input" id="price" required>
           <label for="price" class="suspended-label">Preço do produto</label>
