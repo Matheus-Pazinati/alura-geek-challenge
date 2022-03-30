@@ -47,11 +47,11 @@
           </div>
         </div>
         <div class="add-product__name">
-          <input type="text" class="main-input form__input" id="name" required>
+          <input type="text" class="main-input form__input" id="name" required maxlength="20">
           <label for="name" class="suspended-label">Nome do produto</label>
         </div>
         <select name="category" id="category" class="add-product__category" required>
-          <option value="" hidden>Selecione a categoria do produto</option>
+          <option value="" hidden selected disabled>Categoria do produto</option>
           <option value="starwars">Star Wars</option>
           <option value="consoles">Consoles</option>
           <option value="diversos">Diversos</option>
@@ -61,7 +61,7 @@
           <label for="price" class="suspended-label">Preço do produto</label>
         </div>
         <label for="description" class="sr-only">Descrição do produto</label>
-        <textarea name="description" id="description" cols="30" rows="4" class="add-product__description main-input" placeholder="Descrição do produto"></textarea>
+        <textarea name="description" id="description" cols="30" rows="4" class="add-product__description main-input" placeholder="Descrição do produto" maxlength="150"></textarea>
         <button type="submit" class="add-product__button main-button">Adicionar produto</button>
       </fieldset>
     </form>
