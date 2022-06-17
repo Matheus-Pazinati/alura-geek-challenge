@@ -29,11 +29,11 @@
     </section>
   </header>
   <main>
-    <form action="" class="add-product container">
+    <form action="" class="add-product container" data-form>
       <fieldset>
         <legend class="add-product__title">Adicionar novo produto</legend>
         <div class="add-product__add-image">
-          <div class="add-image__drop">
+          <div class="add-image__drop" id="image-container">
             <i class="icon-insert_photo add-image__icon"></i>
             <p class="image-drop__text">Arraste para adicionar uma imagem para o produto</p>
           </div>
@@ -43,25 +43,25 @@
               <i class="icon-add add-image__icon"></i>
               Adicionar uma imagem para o produto
             </label>
-            <input type="file" id="add-image" name="add-image" accept=".jpg, .jpeg, .png">
+            <input type="file" id="add-image" name="add-image" accept=".jpg, .jpeg, .png" data-input-image>
           </div>
         </div>
         <div class="add-product__name">
-          <input type="text" class="main-input form__input" id="name" required maxlength="20">
+          <input type="text" class="main-input form__input" id="name" required maxlength="20" data-input-name>
           <label for="name" class="suspended-label">Nome do produto</label>
         </div>
-        <select name="category" id="category" class="add-product__category" required>
+        <select name="category" id="category" class="add-product__category" required data-input-category>
           <option value="" hidden selected disabled>Categoria do produto</option>
           <option value="starwars">Star Wars</option>
           <option value="consoles">Consoles</option>
           <option value="diversos">Diversos</option>
         </select>
         <div class="add-product__price">
-          <input type="number" class="main-input form__input" id="price" required>
+          <input type="number" class="main-input form__input" id="price" required data-input-price>
           <label for="price" class="suspended-label">Preço do produto</label>
         </div>
         <label for="description" class="sr-only">Descrição do produto</label>
-        <textarea name="description" id="description" cols="30" rows="4" class="add-product__description main-input" placeholder="Descrição do produto" maxlength="150"></textarea>
+        <textarea name="description" id="description" cols="30" rows="4" class="add-product__description main-input" placeholder="Descrição do produto" maxlength="150" data-input-description></textarea>
         <button type="submit" class="add-product__button main-button">Adicionar produto</button>
       </fieldset>
     </form>
