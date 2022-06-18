@@ -21,8 +21,14 @@ header .header__login {
 .add-image__add-file input[type="file"] {
   display: none;
 }
+.add-product__add-image {
+  position: relative;
+}
+.add-image__visualization {
+  height: 25vh;
+}
 .add-image__add-file {
-  height: 15vh;
+  height: 25vh;
   border: 2px dashed #C8C8C8;
   background-color: #FCFCFC;
 }
@@ -78,6 +84,10 @@ header .header__login {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+  .add-image__visualization {
+    width: 254px;
+    height: 152px;
   }
   .add-image__drop {
     width: 254px;

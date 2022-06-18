@@ -11,25 +11,25 @@ function readImage(file) {
 }
 
 function loadImageFromInput() {
-    let inputFile = document.querySelector('input[type=file]')
-    inputFile.addEventListener('change', () => {
-        let image = inputFile.files[0]
-        readImage(image)
-    })
+  let inputFile = document.querySelector('input[type=file]')
+  inputFile.addEventListener('change', () => {
+    let image = inputFile.files[0]
+    readImage(image)
+  })
 }
 
 function dragAndDropImages() {
   let imageContainer = document.getElementById('image-container')
   imageContainer.addEventListener('dragover', (event) => {
-      event.stopPropagation();
-      event.preventDefault();
-      event.dataTransfer.dropEffect = 'copy';
+    event.stopPropagation();
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
   })
   imageContainer.addEventListener('drop', (event) => {
-      event.stopPropagation();
-      event.preventDefault();
-      const fileList = event.dataTransfer.files;
-      readImage(fileList[0])
+    event.stopPropagation();
+    event.preventDefault();
+    const fileList = event.dataTransfer.files;
+    readImage(fileList[0])
   })
 }
 
