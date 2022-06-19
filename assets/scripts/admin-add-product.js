@@ -1,20 +1,21 @@
 import { openCloseSearchBox } from "./open-close-searchbox.js";
 openCloseSearchBox()
 
-let uploadedImageURL;
-
 function readImage(file) {
-  uploadedImageURL = URL.createObjectURL(file);
+  return URL.createObjectURL(file);
+}
+
+function showImageOnContainer(image) {
   let imageContainer = document.getElementById('image-container')
   imageContainer.innerHTML = ''
-  imageContainer.style.background = `url(${uploadedImageURL}) no-repeat center/cover`
+  imageContainer.style.background = `url(${readImage(image)}) no-repeat center/cover`
 }
 
 function loadImageFromInput() {
   let inputFile = document.querySelector('input[type=file]')
   inputFile.addEventListener('change', () => {
     let image = inputFile.files[0]
-    readImage(image)
+    showImageOnContainer(image)
   })
 }
 
@@ -29,7 +30,7 @@ function dragAndDropImages() {
     event.stopPropagation();
     event.preventDefault();
     const fileList = event.dataTransfer.files;
-    readImage(fileList[0])
+    showImageOnContainer(fileList[0])
   })
 }
 
