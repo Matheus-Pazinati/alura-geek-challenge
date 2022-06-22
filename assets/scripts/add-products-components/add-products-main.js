@@ -30,6 +30,36 @@ async function getAWSUploadUrl() {
   return requestResponse
 }
 
+async function createUpload() {
+  const imageUploaded = await getAWSUploadUrl();
+  const productImage = document.querySelector('[data-input-image]').files[0];
+  let reader = new FileReader();
+  let image = '';
+  reader.onloadend = () => {
+    image = reader.result;
+  }
+  reader.readAsDataURL(productImage)
+
+  fetch(`${imageUploaded.data.attributes.url}`, {
+    method: 'PUT',
+    body: image
+  })
+  const saveUpload = await fetch('https://site-api.datocms.com/uploads', {
+    method: 'POST',
+    headers: headerTemplate,
+    body: JSON.stringify({
+      data: {
+        type: 'upload',
+        attributes: {
+          path: `${imageUploaded.data.id}`
+        }
+      }
+    })
+  })
+  const saveUploadResponse = await saveUpload.json()
+  return saveUploadResponse
+}
+
 function addNewProduct() {
   const productName = document.querySelector('[data-input-name]')
   const productCategory = document.querySelector('[data-input-category]')
@@ -65,5 +95,5 @@ let form = document.querySelector('[data-form]')
 form.addEventListener('submit', (event) => {
   event.preventDefault()
   addNewProduct()
-  getAWSUploadUrl()
+  createUpload()
 })
