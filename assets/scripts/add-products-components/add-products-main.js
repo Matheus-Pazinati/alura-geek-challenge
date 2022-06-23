@@ -40,7 +40,7 @@ async function createUpload() {
   }
   reader.readAsDataURL(productImage)
 
-  fetch(`${imageUploaded.data.attributes.url}`, {
+  await fetch(`${imageUploaded.data.attributes.url}`, {
     method: 'PUT',
     body: image
   })
@@ -58,6 +58,17 @@ async function createUpload() {
   })
   const saveUploadResponse = await saveUpload.json()
   return saveUploadResponse
+}
+
+async function getUploadId() {
+  const jobId = await createUpload()
+  const uploadID = await fetch(`https://site-api.datocms.com/job-results/${jobId.data.id}`, {
+    method: 'GET',
+    headers: headerTemplate
+  })
+  const uploadIDResponse = await uploadID.json()
+  console.log(uploadIDResponse.data.attributes.payload.data.id)
+  return uploadIDResponse
 }
 
 function addNewProduct() {
@@ -82,7 +93,7 @@ function addNewProduct() {
           item_type: {
             data: {
               type: 'item_type',
-              id: '489314'
+              id: '40166'
             }
           }
         }
@@ -92,8 +103,7 @@ function addNewProduct() {
 }
 
 let form = document.querySelector('[data-form]')
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
   event.preventDefault()
-  addNewProduct()
-  createUpload()
+  await getUploadId()
 })
