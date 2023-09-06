@@ -15,3 +15,86 @@
   text-align: center;
   padding-top: 1rem;
 }
+
+main {
+  padding: 1rem 0;
+}
+
+.register__container {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 1.5rem;
+  max-width: 75%;
+  background-color: var(--blue-200);
+  border-radius: 5px;
+}
+
+.register__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.register__field label {
+  font-weight: 700;
+  color: var(--blue-300)
+}
+
+.register__field input {
+  padding: 0.25rem;
+  border-radius: 3px;
+  background-color: var(--gray-100)
+}
+
+.register__field input:active, 
+.register__field input:focus
+ {
+  outline: 1px solid var(--blue-400)
+}
+
+.register__button {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background-color: var(--blue-300);
+  color: var(--gray-100);
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.register__button:hover {
+  background-color: var(--blue-400);
+}
+
+@media (min-width: 650px) {
+
+  .header__logo img {
+    width: 250px;
+  }
+
+  .register__title {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 2.5rem 0;
+  }
+
+  .register__container {
+    max-width: 550px;
+    padding: 1rem 3rem;
+    gap: 2rem;
+  }
+
+  .register__field label {
+    font-size: 1.25rem;
+  }
+
+  .register__field input {
+    padding: 0.5rem;
+  }
+}
