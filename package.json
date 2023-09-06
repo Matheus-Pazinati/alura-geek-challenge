@@ -1,7 +1,7 @@
 {
   "name": "alura-geek-challenge",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "https://github.com/Matheus-Pazinati/alura-geek-challenge.git",
   "author": "Matheus Pazinati <matheuspazinati@gmail.com>",
   "license": "MIT",

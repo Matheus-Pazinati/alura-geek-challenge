@@ -58,8 +58,13 @@
   opacity: 0;
   visibility: hidden;
 }
+.header__login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 .header__login {
-  padding: 0.75rem 3rem;
+  padding: 0.5rem 3rem;
   background: transparent;
   border: 1px solid var(--blue-400);
   color: var(--blue-400);
@@ -69,6 +74,15 @@
   font-weight: 600;
   text-align: center;
   font-size: 1rem;
+}
+.header__register {
+  font-size: 0.75rem;
+  color: var(--blue-400); 
+}
+.header__register:hover {
+  color: var(--blue-300);
+  text-decoration: underline;
+
 }
 .header__login:hover,
 .header__login:active {
@@ -109,6 +123,10 @@
   .header__login {
     flex-grow: 0;
     padding: 0.75rem 4rem;
+  }
+  .header__register {
+    font-size: 1rem;
+    color: var(--blue-400); 
   }
   .header__search {
     display: none;

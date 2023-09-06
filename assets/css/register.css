@@ -1,0 +1,17 @@
+@import '../css/components/reset-global.css';
+@import '../css/components/footer.css';
+
+.register__header {
+  display: flex;
+  justify-content: center;
+  algn-items: center;
+}
+
+.header__logo {
+  padding: 2rem 0;
+}
+
+.register__title {
+  text-align: center;
+  padding-top: 1rem;
+}
