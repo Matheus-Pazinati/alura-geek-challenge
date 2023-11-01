@@ -27,7 +27,7 @@ main {
   margin: 0 auto;
   gap: 1.5rem;
   max-width: 75%;
-  background-color: var(--blue-200);
+  background-color: var(--blue-300);
   border-radius: 5px;
 }
 
@@ -39,7 +39,7 @@ main {
 
 .register__field label {
   font-weight: 700;
-  color: var(--blue-300)
+  color: var(--blue-200)
 }
 
 .register__field input {
@@ -54,12 +54,29 @@ main {
   outline: 1px solid var(--blue-400)
 }
 
+.error {
+  background-color: #FF4030;
+  color: #DDDDDD;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.error::before {
+  content: url('../images/error-icon.png');
+  position: relative;
+  top: 1.5px;
+}
+
 .register__button {
   padding: 1rem;
   border-radius: 5px;
-  border: none;
+  border: 1px solid var(--blue-100);
   font-size: 1rem;
-  background-color: var(--blue-300);
+  background-color: var(--blue-400);
   color: var(--gray-100);
   font-weight: bold;
   cursor: pointer;
@@ -67,7 +84,8 @@ main {
 }
 
 .register__button:hover {
-  background-color: var(--blue-400);
+  background-color: var(--blue-200);
+  color: var(--gray-300);
 }
 
 @media (min-width: 650px) {
@@ -96,5 +114,9 @@ main {
 
   .register__field input {
     padding: 0.5rem;
+  }
+
+  .register__button {
+    font-size: 1.25rem;
   }
 }

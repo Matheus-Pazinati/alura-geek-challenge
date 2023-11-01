@@ -19,23 +19,23 @@
     </section>
   </header>
   <main>
-    <form action="" class="register__container" data-form>
+    <form action="" class="register__container" data-form-register>
       <h2 class="register__title">Crie sua conta.</h2>
       <div class="register__field">
-        <label for="name">Nome</label>
-        <input type="text" id="name">
+        <label for="username">Nome</label>
+        <input type="text" id="username" name="username" data-form-input data-rules="required|min=3">
       </div>
       <div class="register__field">
         <label for="email">E-mail</label>
-        <input type="email" id="email">
+        <input type="email" id="email" name="email" data-form-input data-rules="required|email">
       </div>
       <div class="register__field">
         <label for="password">Senha</label>
-        <input type="password" id="password">
+        <input type="password" id="password" name="password" data-form-input data-rules="required|min=8">
       </div>
       <div class="register__field">
         <label for="password-confirm">Confirme sua senha</label>
-        <input type="password" id="password-confirm">
+        <input type="password" id="passwordConfirm" name="passwordConfirm" data-form-input data-rules="required|password">
       </div>
       <button type="submit" class="register__button">Cadastrar</button>
     </form>
@@ -83,5 +83,7 @@
       </h4>
     </section>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="../scripts/register.js"></script>
 </body>
 </html>
