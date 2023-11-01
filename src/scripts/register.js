@@ -1,5 +1,5 @@
 import { RegisterFormValidator } from "./register-form-validator.js"
 
-const registerForm = document.querySelector('[data-form-register]')
+const registerForm = document.querySelector('[data-form-submit]')
 
-registerForm.addEventListener('submit', RegisterFormValidator.handleSubmit)
+registerForm.addEventListener('click', RegisterFormValidator.handleSubmit)

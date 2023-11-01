@@ -105,6 +105,17 @@ export const RegisterFormValidator = {
       passwordConfirm: ''
     })
 
-    console.log(formValues)
+    fetch("http://localhost:3000/users", {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: formValues.username,
+        email: formValues.email,
+        password: formValues.password,
+        passwordConfirm: formValues.passwordConfirm
+      }),
+    })
   }
 }
