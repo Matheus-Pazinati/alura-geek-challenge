@@ -1,7 +1,7 @@
 import { showSuccessAlert } from "./alerts/alert.js"
 
 export const RegisterFormValidator = {
-  handleSubmit: (event) => {
+  handleSubmit: async (event) => {
     event.preventDefault()
     RegisterFormValidator.clearErrorsMessages()
     let canSubmitForm = true
@@ -16,12 +16,15 @@ export const RegisterFormValidator = {
       }
     })
     if (canSubmitForm) {
-      RegisterFormValidator.submit(formInputs)
-      showSuccessAlert(
-        'Cadastro realizado com sucesso!',
-        'Faça login no site.'
-      )
-      RegisterFormValidator.clearFields(formInputs)
+      const formHasSubmited = await RegisterFormValidator.submit(formInputs)
+
+      if (formHasSubmited) {
+        showSuccessAlert(
+          'Cadastro realizado com sucesso!',
+          'Faça login no site.'
+        )
+        RegisterFormValidator.clearFields(formInputs)
+      }
     }
   },
   validateInput: (input) => {
@@ -46,7 +49,7 @@ export const RegisterFormValidator = {
             }
             break;
           case 'max':
-            if (input.value.lenght > ruleDetails[1]) {
+            if (input.value.length > ruleDetails[1]) {
               return {
                 messageError: `Este campo pode ter no máximo ${ruleDetails[1]} caracteres!`
               }
@@ -94,7 +97,7 @@ export const RegisterFormValidator = {
       input.value = ""
     })
   },
-  submit: (inputs) => {
+  submit: async (inputs) => {
     const formValues = inputs.reduce((acc, current) => {
       acc[current.id] = current.value
       return acc
@@ -104,8 +107,7 @@ export const RegisterFormValidator = {
       password: '',
       passwordConfirm: ''
     })
-
-    fetch("http://localhost:3000/users", {
+    const response = await fetch("http://localhost:3000/users", {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -117,5 +119,20 @@ export const RegisterFormValidator = {
         passwordConfirm: formValues.passwordConfirm
       }),
     })
+
+    const jsonResponse = await response.json()
+
+    if (!response.ok) {
+      if (response.status == 409) {
+        RegisterFormValidator.showInputError(
+          document.getElementById(jsonResponse.path),
+          jsonResponse.message
+        )
+        throw new Error(jsonResponse.message)
+      }
+      return false
+    }
+
+    return true
   }
 }
