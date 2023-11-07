@@ -29,13 +29,13 @@
     </section>
   </header>
   <main>
-    <form action="" class="login">
+    <form class="login">
       <fieldset class="login__container">
         <legend class="login__title">Iniciar Sessão</legend>
         <label for="email" class="sr-only">Escreva seu email</label>
-        <input type="email" id="email" class="login__email main-input" placeholder="Escreva seu email" required>
+        <input type="email" id="email" class="login__email main-input" name="email" placeholder="Escreva seu email" data-form-input data-rules="required|email">
         <label for="email" class="sr-only">Escreva sua senha</label>
-        <input type="password" id="password" class="login__password main-input" placeholder="Escreva sua senha" required>
+        <input type="password" id="password" class="login__password main-input" name="password" placeholder="Escreva sua senha" data-form-input data-rules="required|min=8">
         <button class="login__button main-button" data-button-submit>Entrar</button>
       </fieldset>
     </form>
